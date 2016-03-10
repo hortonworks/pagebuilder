@@ -11,3 +11,4 @@ ADD ./gh-pages /tmp/gh-pages
 ADD ./theme /pagebuilder/theme
 WORKDIR /work
 EXPOSE 8000
+RUN pip install markdown-include
