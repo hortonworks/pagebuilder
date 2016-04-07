@@ -1,0 +1,7 @@
+#!/bin/bash -e
+
+git clone -b $BRANCH https://github.com/sequenceiq/cloudbreak.git /tmp/cloudbreak
+cd /tmp/cloudbreak
+time ./gradlew -PmainClass=com.sequenceiq.cloudbreak.core.flow2.config.OfflineStateGenerator -q :core:execute
+cd /work
+cp /tmp/cloudbreak/core/build/diagrams/flow/*.dot /work/docs/diagrams
