@@ -1,4 +1,4 @@
-FROM java:openjdk-7-jdk
+FROM java:openjdk-8-jdk
 RUN apt-get update -y && apt-get install -y python openssh-client git && apt-get clean \
   && curl https://bootstrap.pypa.io/get-pip.py | python \
   && pip install --upgrade mkdocs \
