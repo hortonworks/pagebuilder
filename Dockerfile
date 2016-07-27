@@ -11,4 +11,5 @@ ADD ./gh-pages /tmp/gh-pages
 ADD ./theme /pagebuilder/theme
 WORKDIR /work
 EXPOSE 8000
-RUN pip install markdown-include
+RUN pip install requests markdown-include
+ADD https://raw.githubusercontent.com/sequenceiq/markdown-include/master/markdown_include/include.py /usr/local/lib/python2.7/dist-packages/markdown_include/include.py
